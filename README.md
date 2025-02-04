@@ -3,4 +3,4 @@
 
  Estou aprendendo a criar sites e gerenciar meus repositórios no GitHub.
 
-<a href="https://github.io/silvardev/Desafios/d010/index.html">Veja meu projeto aqui!</a>
+<a href="https://silvardev.github.io/Desafios/d010/index.html" target="_blank">Veja meu projeto aqui!</a>
