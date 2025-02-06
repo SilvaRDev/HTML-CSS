@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centralizando Background</title>
+  <style>
+    div#fora {
+      height: 96vh;
+      background-color: violet;
+      position: relative;
+    }
+
+    div#dentro {
+      width: 300px;
+      height: 200px;
+      background-color: #f7f754fd;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+  <div id="fora">
+    <div id="dentro">
+
+    </div>
+  </div>
+</body>
+</html>
