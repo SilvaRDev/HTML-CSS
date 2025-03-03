@@ -1,0 +1,7 @@
+{
+  "discord.detailsDebugging": "editando...",
+  "discord.detailsEditing": "Editing a {lang} file",
+  "discord.lowerDetailsDebugging": "Debugging",
+  "discord.lowerDetailsEditing": "line {current_line}",
+  "discord.lowerDetailsIdling": ""
+}
