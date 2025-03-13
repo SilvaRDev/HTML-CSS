@@ -1,0 +1,18 @@
+@charset 'UTF-8';
+
+header > h1 {
+  flex-basis: 40px;
+}
+
+header, header > nav {
+  flex-flow: column nowrap;
+}
+
+header > nav > a {
+  width: 90vw;
+  transition: none;
+}
+
+header > nav > a:hover {
+  transition: none;
+}
