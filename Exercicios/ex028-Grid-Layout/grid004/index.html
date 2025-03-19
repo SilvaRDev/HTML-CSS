@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    .wrapper {
+      display: grid;      
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(3, minmax(100px, auto));
+      gap: 1em;
+    }
+    
+    .wrapper div:nth-child(1) {
+      grid-column: 1 / -1;
+      height: 350px;
+      /* grid-column-start: 1;
+      grid-column-end: 3; */
+    }
+
+    .wrapper div:nth-child(2) {
+      grid-column: 1;
+    }
+    
+    .wrapper div:nth-child(3) {
+      grid-column: 2 / 5;
+    }
+    
+    .wrapper div:nth-child(5) {
+      grid-column: 1 / -1;
+    }
+
+    .wrapper div{
+      padding: 10px;
+      background-color: #016fff;
+    }
+
+    .wrapper div:nth-child(even) {
+      background-color: #00e1ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+  </div>
+</body>
+</html>
