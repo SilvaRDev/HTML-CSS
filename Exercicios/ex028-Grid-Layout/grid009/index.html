@@ -13,17 +13,22 @@
     
     .wrapper {
       display: grid;
-      grid-template-columns:[site-start] repeat(5, 1fr) [site-end];
-      grid-auto-rows: 200px;
+      grid-template-columns:[site-start] 1fr [content-start] repeat(5, 1fr) [site-end];
+      grid-template-rows: [site-top] 200px [content-top] 200px [content-bottom] 200px [site-bottom];
       gap: .5rem;
     }
 
-    header {
-      grid-column: site-start / site-end;
+    header, footer {
+      grid-column: site;
     }
 
-    footer {
-      grid-column: site-start / site-end;
+    main {
+      grid-column: content-start / site-end;
+    }
+
+    aside {
+      grid-column: site-start / content-start;
+      grid-row: content-top / content-bottom;
     }
 
     .wrapper *{
