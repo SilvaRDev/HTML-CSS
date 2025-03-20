@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Grid</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    .wrapper {
+      display: grid;
+      grid-template-columns:[site-start] repeat(5, 1fr) [site-end];
+      grid-auto-rows: 200px;
+      gap: .5rem;
+    }
+
+    header {
+      grid-column: site-start / site-end;
+    }
+
+    footer {
+      grid-column: site-start / site-end;
+    }
+
+    .wrapper *{
+      padding: 10px;
+      background-color: #016fff;
+    }
+
+    .wrapper *:nth-child(even) {
+      background-color: #00e1ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>Header</header>
+    <main>Main</main>
+    <aside>Aside</aside>
+    <footer>Footer</footer>
+  </div>
+</body>
+</html>
