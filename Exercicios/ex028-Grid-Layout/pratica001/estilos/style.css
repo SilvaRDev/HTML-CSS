@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.l-wrapper {
+  display: grid;
+  gap: .5rem;
+  grid-template-columns: 1fr;
+  height: 100vh;
+  width: 100vw;
+  grid-template-areas: 
+    "header"
+    "main"
+    "sidebar"
+    "aside-main"
+    "aside-sec"
+    "footer"
+  ;
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: .5fr 2fr .5fr .2fr;
+
+    grid-template-areas: 
+      "header header     header     header    header    header"
+      ".      main       main       main      sidebar   .     "
+      ".      aside-main aside-main aside-sec aside-sec .     "
+      "footer footer     footer     footer    footer    footer"
+    ;
+  }
+}
+
+.l-header {
+  background-color: skyblue;
+  grid-area: header;
+}
+
+.l-main {
+  background-color: salmon;
+  grid-area: main;
+}
+
+.l-sidebar {
+  background-color: blue;
+  grid-area: sidebar;
+}
+
+.l-aside-main {
+  background-color: purple;
+  grid-area: aside-main;
+}
+
+.l-aside-sec {
+  background-color: purple;
+  grid-area: aside-sec;
+}
+
+.l-footer {
+  background-color: skyblue;
+  grid-area: footer;
+}
