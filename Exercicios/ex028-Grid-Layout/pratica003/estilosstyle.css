@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.l-article {
+  display: grid;
+  gap: .5rem;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas: 
+    "title title title title title title"
+    "meta  meta  meta  meta  meta  meta "
+    "copy1 copy1 copy1 copy1 copy1 copy1"
+    "copy2 copy2 copy2 copy2 copy2 copy2"
+    "media media media media media media"
+    "aside aside aside aside aside aside"
+  ;
+
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+@media screen and (min-width: 480px) {
+  .l-article {
+    grid-template-areas: 
+      "meta  meta  title title title title"
+      "copy1 copy1 copy1 copy1 copy1 copy1"
+      "copy2 copy2 copy2 copy2 copy2 copy2"
+      "media media media media media aside"
+    ;
+  }
+} 
+
+@media screen and (min-width: 960px) {
+  .l-article {
+    grid-template-areas: 
+      "meta  title  title title copy2 copy2"
+      "copy1 copy1  copy1 copy1 copy2 copy2"
+      "copy1 copy1  copy1 copy1 copy2 copy2"
+      "media media  media media media media"
+      "aside aside  .     .     .     .    "
+    ;
+  }
+}
+
+.l-article > * {
+  min-height: 100px;
+  padding: 1rem;
+}
+
+.l-article-title {
+  background-color: aqua;
+  grid-area: title;
+}
+
+.l-article-meta {
+  background-color: gray;
+  grid-area: meta;
+}
+
+.l-article-copy1 {
+  background-color: royalblue;
+  grid-area: copy1;
+}
+
+.l-article-copy2 {
+  background-color: darksalmon;
+  grid-area: copy2;
+}
+
+.l-article-media {
+  background-color: rgb(252, 221, 135);
+  grid-area: media;
+}
+
+.l-article-aside {
+  background-color: coral;
+  grid-area: aside;
+}
